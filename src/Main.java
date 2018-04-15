@@ -5,9 +5,12 @@ public class Main {
 		Mundo m = new Mundo();
 		//Veiculo v = new Veiculo();
 		
-
 		
+		
+
+		m.geraVeiculos();
 		m.desenhaMundo();
+		m.atualizaMundo();
 
 	}
 

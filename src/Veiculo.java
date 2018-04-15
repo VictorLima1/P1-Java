@@ -24,6 +24,10 @@ public class Veiculo {
 		return x;
 	}
 	
+	public void andaX(int x) {
+		this.x = x;
+	}
+	
 	public int setY() {
 		y = r.nextInt(58);
 		//System.out.println(y);

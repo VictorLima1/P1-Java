@@ -38,18 +38,7 @@ public class Mundo {
             				{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
             				{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 	
-	
-	
-	public void desenhaMundo() {
-		/*for(int i = 0; i<30; i++) {
-			for(int j = 0; j < 60; j++) {
-				System.out.print(mapa[i][j]);
-			}
-			System.out.println("");
-		}
-		
-		System.out.println("");*/
-		
+	public void geraVeiculos() {
 		for(int i = 0; i < 10; i++) {
 			c[i] = new Carro((v.setX()+1), (v.setY()+1), 2, "verde");
 			d[i] = new Caminhao((v.setX()+1), (v.setY()+1), 2, "amarelo");
@@ -69,16 +58,65 @@ public class Mundo {
 			for(int i = 0; i<30; i++) {
 				for(int j = 0; j < 60; j++) {
 					if(i == x && j == y) {
-						mapa[i][j] = 3;
+						if(mapa[i][j] == 2)
+						{
+							
+						}
+						else {
+							mapa[i++][j] = 3;
+						}
+						
 					}
+					
 					if(i == b && j == c) {
-						mapa[i][j] = 4;
+						if(mapa[i][j] == 2)
+						{
+							
+						}
+						else {
+							mapa[i++][j] = 4;
+						}
+						
 					}
+					
 					if(i == e && j == f) {
-						mapa[i][j] = 5;
+						if(mapa[i][j] == 2)
+						{
+							
+						}
+						else {
+							mapa[i++][j] = 5;
+						}
 					}
 				}
-		}}
+			}
+		}
+	}
+	
+	
+	public void desenhaMundo() {
+		/*for(int i = 0; i<30; i++) {
+			for(int j = 0; j < 60; j++) {
+				System.out.print(mapa[i][j]);
+			}
+			System.out.println("");
+		}
+		
+		System.out.println("");*/
+		
+		
+		
+		
+		
+	/*	for(int i = 0; i < 10; i++) {
+			if(c[i].getX() == d[i].getX() && c[i].getY() == d[i].getY()) {
+				c[i].setX();
+				c[i].setY();
+			}
+		}*/
+		
+		
+		
 		
 		/*for(int i = 0; i<30; i++) {
 			for(int j = 0; j < 60; j++) {
@@ -142,6 +180,23 @@ public class Mundo {
 		
 	}
 	
+	
+	public void atualizaMundo() {
+		for(int i = 0; i < 10; i ++) {
+			/*System.out.print(c[i].getX() + " ");
+			System.out.println(c[i].getY());
+			System.out.println("");*/
+			
+			c[i].move(c[i]);
+			
+			/*System.out.print(c[i].getX() + " ");
+			System.out.println(c[i].getY());
+			System.out.println("");*/
+			
+		}
+		
+		desenhaMundo();
+	}
 	
 	}
 

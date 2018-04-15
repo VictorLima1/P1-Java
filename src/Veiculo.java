@@ -24,8 +24,16 @@ public class Veiculo {
 		return x;
 	}
 	
+	public void setXNovamente(int x) {
+		this.x = x;
+	}
+	
 	public void andaX(int x) {
 		this.x = x;
+	}
+	
+	public void andaY(int y) {
+		this.y = y;
 	}
 	
 	public int setY() {

@@ -2,6 +2,8 @@
 public class Mundo {
 	Veiculo v = new Veiculo();
 	Carro[] c = new Carro[1000];
+	Caminhao[] d = new Caminhao[1000];
+	Moto[] m = new Moto[1000];
 	
 	
 	
@@ -36,45 +38,110 @@ public class Mundo {
             				{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
             				{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
 	
+	
+	
 	public void desenhaMundo() {
+		/*for(int i = 0; i<30; i++) {
+			for(int j = 0; j < 60; j++) {
+				System.out.print(mapa[i][j]);
+			}
+			System.out.println("");
+		}
+		
+		System.out.println("");*/
 		
 		for(int i = 0; i < 10; i++) {
 			c[i] = new Carro((v.setX()+1), (v.setY()+1), 2, "verde");
-			System.out.print(c[i].getX());
-			System.out.println(" " + c[i].getY());
+			d[i] = new Caminhao((v.setX()+1), (v.setY()+1), 2, "amarelo");
+			m[i] = new Moto((v.setX()+1), (v.setY()+1), 2, "azul");
+			//System.out.print(c[i].getX());
+			//System.out.println(" " + c[i].getY());
 		}
 		
-		for(int i = 0; i<30; i++) {
-			for(int j = 0; j < 60; j++) {
-				if(mapa[i][j] == 1) {
-					
-					System.out.print("1");
-				}
-				else if(mapa[i][j] == 0) {
-					int x = 0;
-					
-					if(i == c[x].getX() && j == c[x].getY()) {
-							System.out.print("C");	
-							x++;
-						}
-						else {
-							System.out.print(" ");
-						}
-						
-					}
-				
-				else if(mapa[i][j] == 2) {
-					System.out.print("X");
-				}
-				
-				
-			}
+		for(int a = 0; a < 10; a++) {
+			int x = c[a].getX();
+			int y = c[a].getY();
+			int b = d[a].getX();
+			int c = d[a].getY();
+			int e = m[a].getX();
+			int f = m[a].getY();
 			
+			for(int i = 0; i<30; i++) {
+				for(int j = 0; j < 60; j++) {
+					if(i == x && j == y) {
+						mapa[i][j] = 3;
+					}
+					if(i == b && j == c) {
+						mapa[i][j] = 4;
+					}
+					if(i == e && j == f) {
+						mapa[i][j] = 5;
+					}
+				}
+		}}
+		
+		/*for(int i = 0; i<30; i++) {
+			for(int j = 0; j < 60; j++) {
+				System.out.print(mapa[i][j]);
+			}
 			System.out.println("");
-		}	
+		}
+		*/
+		//for (int a = 0; a < 10; a++) {
+		int carros = 0;
+		int motos = 0;
+		int caminhoes = 0;
+			for(int i = 0; i<30; i++) {
+				for(int j = 0; j < 60; j++) {
+					
+					if(mapa[i][j] == 1) {
+						
+						System.out.print("1");
+					}
+					else if(mapa[i][j] == 0) {
+						int x = 0;
+						
+						/*if(i == c[x].getX() && j == c[x].getY()) {
+								System.out.print("C");	
+								//System.out.print(c[x].getX());	
+								//System.out.print(c[x].getY());
+								x++;
+							}
+							else {*/
+								System.out.print(" ");
+							//}
+							
+						}
+					
+					else if(mapa[i][j] == 2) {
+						System.out.print("X");
+					}
+					else if(mapa[i][j] == 3){
+						System.out.print("C");
+						carros++;
+					}
+					else if(mapa[i][j] == 4){
+						System.out.print("D");
+						caminhoes++;
+					}
+					else if(mapa[i][j] == 5){
+						System.out.print("M");
+						motos++;
+					}
+					
+				}
+				
+				System.out.println("");
+			}	
+			System.out.println("Número de carros: " + carros);
+			System.out.println("Número de caminhões: " + caminhoes);
+			System.out.println("Número de motos: " + motos);
+		//}
+		
+		
 		
 	}
 	
 	
-}
+	}
 

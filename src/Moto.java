@@ -13,39 +13,47 @@ public class Moto extends Veiculo{
 		if(mov == 0) {
 			int x = m.getX();
 			x = x + 3;
-			if(x >= 30) {
-				x = 1;
-			}
-			m.andaX(x);
+			m.andaX(verificaX(x));
 		}
 		
 		if(mov == 1) {
 			int x = m.getX();
 			x = x - 3;
-			if(x <= 0) {
-				x = 29;
-			}
-			m.andaX(x);
+			m.andaX(verificaX(x));
 		}
 		
 		if(mov == 2) {
 			int y = m.getY();
 			y = y + 3;
-			if(y >= 60) {
-				y = 1;
-			}
-			m.andaY(y);
+			m.andaY(verificaY(y));
 		}
 		
 		if(mov == 3) {
 			int y = m.getY();
 			y = y - 3;
-			if(y <= 0) {
-				y = 59;
-			}
-			m.andaY(y);
+			m.andaY(verificaY(y));
 		}
 	
+	}
+	
+	public int verificaX(int x) {
+		if (x >= 29) {
+			x = 1;
+		}
+		if(x <= 0) {
+			x = 28;
+		}
+		return x;
+	}
+	
+	public int verificaY(int y) {
+		if (y >= 59) {
+			y = 1;
+		}
+		if(y <= 0) {
+			y = 58;
+		}
+		return y;
 	}
 	
 	private int mov;

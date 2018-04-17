@@ -15,44 +15,49 @@ public class Carro extends Veiculo{
 		if(mov == 0) {
 			int x = c.getX();
 			x = x + 2;
-			if(x >= 30) {
-				x = 1;
-			}
-			c.andaX(x);
+			c.andaX(verificaX(x));
 		}
 		
 		if(mov == 1) {
 			int x = c.getX();
 			x = x - 2;
-			if(x <= 0) {
-				x = 29;
-			}
-			c.andaX(x);
+			c.andaX(verificaX(x));
 		}
 		
 		if(mov == 2) {
 			int y = c.getY();
 			y = y + 2;
-			if(y >= 60) {
-				y = 1;
-			}
-			c.andaY(y);
+			c.andaY(verificaY(y));
 		}
 		
 		if(mov == 3) {
 			int y = c.getY();
 			y = y - 2;
-			if(y <= 0) {
-				y = 59;
-			}
-			c.andaY(y);
+			c.andaY(verificaY(y));
 		}
 		
 	}
-
-	public int getMov() {
-		return mov;
+	
+	public int verificaX(int x) {
+		if (x >= 29) {
+			x = 1;
+		}
+		if(x <= 0) {
+			x = 28;
+		}
+		return x;
 	}
+	
+	public int verificaY(int y) {
+		if (y >= 59) {
+			y = 1;
+		}
+		if(y <= 0) {
+			y = 58;
+		}
+		return y;
+	}
+
 	
 	private int num_passageiros;
 	private int mov;

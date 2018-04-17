@@ -59,6 +59,7 @@ public class Veiculo {
 	}
 	
 	
+	
 	private int x;
 	private int y;
 	private int velocidade;

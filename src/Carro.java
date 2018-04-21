@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Carro extends Veiculo{
 	Veiculo v = new Veiculo();
+	//ArrayList <Carro> ca = new ArrayList<>();
 	
 	public Carro (int x, int y, int velocidade, String cor) {
 		super(x, y, velocidade, cor);

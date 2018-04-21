@@ -1,9 +1,13 @@
+import java.util.ArrayList;
 
 public class Mundo {
 	Veiculo v = new Veiculo();
+	ArrayList <Carro> ca = new ArrayList<>();
 	Carro[] c = new Carro[1000];
 	Caminhao[] d = new Caminhao[1000];
+	ArrayList <Caminhao> da = new ArrayList<>();
 	Moto[] m = new Moto[1000];
+	ArrayList <Moto> ma = new ArrayList<>();
 
 	public int mapa[][] = {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
             				{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -39,8 +43,11 @@ public class Mundo {
 	public void geraVeiculos() {
 		for(int i = 0; i < 10; i++) {
 			c[i] = new Carro((v.setX()+1), (v.setY()+1), 2, "verde");
-			d[i] = new Caminhao((v.setX()+1), (v.setY()+1), 2, "amarelo");
-			m[i] = new Moto((v.setX()+1), (v.setY()+1), 2, "azul");
+			ca.add(new Carro((v.setX()+1), (v.setY()+1), 2, "verde"));
+			d[i] = new Caminhao((v.setX()+1), (v.setY()+1), 1, "amarelo");
+			da.add(new Caminhao((v.setX()+1), (v.setY()+1), 1, "verde"));
+			m[i] = new Moto((v.setX()+1), (v.setY()+1), 3, "azul");
+			ma.add(new Moto((v.setX()+1), (v.setY()+1), 3, "azul"));
 			//System.out.print(c[i].getX());
 			//System.out.println(" " + c[i].getY());
 		}
@@ -59,15 +66,21 @@ public class Mundo {
 		
 		for(int a = 0; a < 10; a++) {
 			int x = c[a].getX();
+			int xa = ca.get(a).getX();
 			int y = c[a].getY();
+			int ya = ca.get(a).getY();
 			int b = d[a].getX();
+			int ba = da.get(a).getX();
 			int c = d[a].getY();
+			int ca = da.get(a).getY();
 			int e = m[a].getX();
+			int ea = ma.get(a).getX();
 			int f = m[a].getY();
+			int fa = ma.get(a).getY();
 			
 			for(int i = 0; i<30; i++) {
 				for(int j = 0; j < 60; j++) {
-					if(i == x && j == y) {
+					if(i == xa && j == ya) {
 						if(mapa[i][j] == 2)
 						{
 							
@@ -78,7 +91,7 @@ public class Mundo {
 						
 					}
 					
-					if(i == b && j == c) {
+					if(i == ba && j == ca) {
 						if(mapa[i][j] == 2)
 						{
 							
@@ -89,7 +102,7 @@ public class Mundo {
 						
 					}
 					
-					if(i == e && j == f) {
+					if(i == ea && j == fa) {
 						if(mapa[i][j] == 2)
 						{
 							
@@ -189,22 +202,39 @@ public class Mundo {
 	}
 	
 	public void atualizaMundo() {
-		for(int i = 0; i < 10; i ++) {
+		for(int i = 0; i < ca.size(); i++) {
+			ca.get(i).move(ca.get(i));
+		}
+		
+		for (int i = 0; i < da.size(); i ++) {
+			da.get(i).move(da.get(i));
+		}
+		
+		for (int i = 0; i < ma.size(); i ++) {
+			ma.get(i).move(ma.get(i));
+		}
+		
+		//for(int i = 0; i < 10; i ++) {
 			//Carro ca[] = new Carro[1000];
 			//ca[i].setXNovamente(c[i].getX());
 			/*System.out.print(c[i].getX() + " ");
 			System.out.println(c[i].getY());
 			System.out.println("");*/
-			
+			/*
 			c[i].move(c[i]);
 			d[i].move(d[i]);
-			m[i].move(m[i]);
+			m[i].move(m[i]);*/
 			
 			/*System.out.print(c[i].getX() + " ");
 			System.out.println(c[i].getY());
 			System.out.println("");*/
 			
-		}
+		//}
+		
+		/*for(int i = 0; i < c.length; i++) {
+			
+		}*/
+		
 		
 		refazMapa();
 		desenhaMundo();

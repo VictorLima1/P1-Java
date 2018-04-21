@@ -5,15 +5,17 @@ public class Main {
 		Mundo m = new Mundo();
 
 		m.geraVeiculos();
+		m.geraDois();
 		m.desenhaMundo();
-		
+		/*
 		int i = 0;
 		while (i == 0) {
 			m.atualizaMundo();
 			Thread.sleep(1000);  
 		}
 		
-	
+	*/
+		m.atualizaMundo();
 
 	}
 

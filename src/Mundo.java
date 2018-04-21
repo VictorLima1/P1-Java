@@ -3,10 +3,10 @@ import java.util.ArrayList;
 public class Mundo {
 	Veiculo v = new Veiculo();
 	ArrayList <Carro> ca = new ArrayList<>();
-	Carro[] c = new Carro[1000];
-	Caminhao[] d = new Caminhao[1000];
+	//Carro[] c = new Carro[1000];
+	//Caminhao[] d = new Caminhao[1000];
 	ArrayList <Caminhao> da = new ArrayList<>();
-	Moto[] m = new Moto[1000];
+	//Moto[] m = new Moto[1000];
 	ArrayList <Moto> ma = new ArrayList<>();
 
 	public int mapa[][] = {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -42,11 +42,11 @@ public class Mundo {
 	
 	public void geraVeiculos() {
 		for(int i = 0; i < 10; i++) {
-			c[i] = new Carro((v.setX()+1), (v.setY()+1), 2, "verde");
+			//c[i] = new Carro((v.setX()+1), (v.setY()+1), 2, "verde");
 			ca.add(new Carro((v.setX()+1), (v.setY()+1), 2, "verde"));
-			d[i] = new Caminhao((v.setX()+1), (v.setY()+1), 1, "amarelo");
+			//d[i] = new Caminhao((v.setX()+1), (v.setY()+1), 1, "amarelo");
 			da.add(new Caminhao((v.setX()+1), (v.setY()+1), 1, "verde"));
-			m[i] = new Moto((v.setX()+1), (v.setY()+1), 3, "azul");
+			//m[i] = new Moto((v.setX()+1), (v.setY()+1), 3, "azul");
 			ma.add(new Moto((v.setX()+1), (v.setY()+1), 3, "azul"));
 			//System.out.print(c[i].getX());
 			//System.out.println(" " + c[i].getY());
@@ -65,17 +65,17 @@ public class Mundo {
 		}
 		
 		for(int a = 0; a < 10; a++) {
-			int x = c[a].getX();
+		//	int x = c[a].getX();
 			int xa = ca.get(a).getX();
-			int y = c[a].getY();
+		//	int y = c[a].getY();
 			int ya = ca.get(a).getY();
-			int b = d[a].getX();
+		//	int b = d[a].getX();
 			int ba = da.get(a).getX();
-			int c = d[a].getY();
+		//	int c = d[a].getY();
 			int ca = da.get(a).getY();
-			int e = m[a].getX();
+		//	int e = m[a].getX();
 			int ea = ma.get(a).getX();
-			int f = m[a].getY();
+		//	int f = m[a].getY();
 			int fa = ma.get(a).getY();
 			
 			for(int i = 0; i<30; i++) {
@@ -158,7 +158,7 @@ public class Mundo {
 						System.out.print("1");
 					}
 					else if(mapa[i][j] == 0) {
-						int x = 0;
+						
 						
 						/*if(i == c[x].getX() && j == c[x].getY()) {
 								System.out.print("C");	
@@ -167,7 +167,7 @@ public class Mundo {
 								x++;
 							}
 							else {*/
-								System.out.print(" ");
+								System.out.print("\u001b[41m \033[0m");
 							//}
 							
 						}

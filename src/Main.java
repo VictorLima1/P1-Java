@@ -11,7 +11,7 @@ public class Main {
 		int i = 0;
 		while (i == 0) {
 			m.atualizaMundo();
-			Thread.sleep(10);  
+			Thread.sleep(500);  
 		}
 		
 	

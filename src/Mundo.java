@@ -76,7 +76,13 @@ public class Mundo {
 			for(int i = 0; i<30; i++) {
 				for(int j = 0; j < 60; j++) {
 					if(i == xa && j == ya) {
-						mapa[i][j] = 3;
+						if(mapa[i][j] == 2) {
+							mapa[i][j] = 2;
+							
+						}
+						else {
+							mapa[i][j] = 3;
+						}
 					}
 				}
 			}
@@ -89,7 +95,13 @@ public class Mundo {
 			for(int i = 0; i<30; i++) {
 				for(int j = 0; j < 60; j++) {
 					if(i == ba && j == ca) {
-						mapa[i][j] = 4;
+						if(mapa[i][j] == 2) {
+							mapa[i][j] = 2;
+							
+						}
+						else {
+							mapa[i][j] = 4;
+						}
 					}
 				}
 			}
@@ -102,7 +114,13 @@ public class Mundo {
 			for(int i = 0; i<30; i++) {
 				for(int j = 0; j < 60; j++) {
 					if(i == ea && j == fa) {
-						mapa[i][j] = 5;
+						if(mapa[i][j] == 2) {
+							mapa[i][j] = 2;
+							
+						}
+						else {
+							mapa[i][j] = 5;
+						}
 					}
 				}
 			}	
@@ -174,6 +192,7 @@ public class Mundo {
 	}
 	
 	public void detectaColisao() {
+		// Colisão entre carros apenas
 		for (int i = 0; i < ca.size(); i ++) {
 			for (int j = 0; j < ca.size(); j++) {
 				if(ca.get(j).getX() == ca.get(i).getX() && ca.get(j).getY() == ca.get(i).getX()) {
@@ -182,6 +201,7 @@ public class Mundo {
 			}
 		}
 		
+		// Colisão entre caminhões apenas
 		for (int i = 0; i < da.size(); i ++) {
 			for (int j = 0; j < da.size(); j++) {
 				if(da.get(j).getX() == da.get(i).getX() && da.get(j).getY() == da.get(i).getX()) {
@@ -190,10 +210,56 @@ public class Mundo {
 			}
 		}
 		
+		// Colisão entre motos apenas
 		for (int i = 0; i < ma.size(); i ++) {
 			for (int j = 0; j < ma.size(); j++) {
 				if(ma.get(j).getX() == ma.get(i).getX() && ma.get(j).getY() == ma.get(i).getX()) {
 						ma.remove(i);
+				}
+			}
+		}
+		
+		// Colisão entre caminhão e carro
+		for(int i = 0; i < da.size(); i++) {
+			for (int j = 0; j < ca.size(); j++) {
+				if(ca.get(j).getX() == da.get(i).getX() && ca.get(j).getY() == da.get(i).getY()) {
+					if(da.size()>ca.size()) {
+						
+					}
+					else {
+						ca.remove(i);
+					}
+					
+				}
+			}
+		}
+		
+		// Colisão entre caminhão e moto
+		for(int i = 0; i < da.size(); i++) {
+			for (int j = 0; j < ma.size(); j++) {
+				if(ma.get(j).getX() == da.get(i).getX() && ma.get(j).getY() == da.get(i).getY()) {
+					if(da.size()>ma.size()) {
+						
+					}
+					else {
+						ma.remove(i);
+					}
+					
+				}
+			}
+		}
+		
+		// Colisão entre carro e moto
+		for(int i = 0; i < ca.size(); i++) {
+			for (int j = 0; j < ma.size(); j++) {
+				if(ma.get(j).getX() == ca.get(i).getX() && ma.get(j).getY() == ca.get(i).getY()) {
+					if(ca.size()>ma.size()) {
+						
+					}
+					else {
+						ma.remove(i);
+					}
+					
 				}
 			}
 		}

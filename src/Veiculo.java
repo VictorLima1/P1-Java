@@ -11,11 +11,12 @@ public class Veiculo {
         cor = null;
 	}
 	
-	public Veiculo(int x, int y, int velocidade, String cor) {
+	public Veiculo(int x, int y, int velocidade, String cor, boolean fabrica) {
 		this.x = x;
 		this.y = y;
 		this.velocidade = velocidade;
 		this.cor = cor;
+		this.fabrica = fabrica;
 	}
 	
 	public int setX() {
@@ -58,7 +59,13 @@ public class Veiculo {
 		return cor;
 	}
 	
+	public void setFabrica(boolean status) {
+		fabrica = status;
+	}
 	
+	public boolean getFabrica() {
+		return fabrica;
+	}
 	
 	private int x;
 	private int y;

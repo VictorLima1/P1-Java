@@ -134,30 +134,6 @@ public class Mundo {
 		int motos = 0;
 		int caminhoes = 0;
 		
-		for(int i = 0; i < ca.size(); i++) {
-			if(ca.get(i).getFabrica() == true) {
-				//carros++;
-			}
-		}
-		
-		
-		
-		for(int i = 0; i < da.size(); i++) {
-			if(da.get(i).getFabrica() == true) {
-				//caminhoes++;
-			}
-		}
-		
-		
-		
-		for(int i = 0; i < ma.size(); i++) {
-			if(ma.get(i).getFabrica() == true) {
-				//motos++;
-			}
-		}
-		
-		
-		
 			for(int i = 0; i<30; i++) {
 				for(int j = 0; j < 60; j++) {
 					
@@ -169,23 +145,16 @@ public class Mundo {
 					}
 					
 					else if(mapa[i][j] == 2) {
-						//System.out.print("X");
 						System.out.print("\u001b[42m \033[0m");
 					}
 					else if(mapa[i][j] == 3){
-						//System.out.print("C");
 						System.out.print("\u001b[44m \033[0m");
-						//carros++;
 					}
 					else if(mapa[i][j] == 4){
-						//System.out.print("D");
 						System.out.print("\u001b[43;1m \033[0m");
-						//caminhoes++;
 					}
 					else if(mapa[i][j] == 5){
-						//System.out.print("M");
 						System.out.print("\u001b[41m \033[0m");
-						//motos++;
 					}
 					
 				}
@@ -244,20 +213,7 @@ public class Mundo {
 					}
 					else {
 						ca.remove(ca.get(i));
-						//ca.remove(ca.get(i));
-					}
-					
-					/*if(ca.get(i).getX() == ca.get(i).getX() && ca.get(i).getY() == ca.get(i).getY()) {
-						ca.remove(ca.get(i));
-						ca.remove(ca.get(i));
-					}
-					else {
-						ca.remove(ca.get(i));
-						ca.remove(ca.get(i));
-					}*/
-						
-					
-					
+					}	
 				}
 			}
 		}
@@ -271,11 +227,7 @@ public class Mundo {
 					}
 					else {
 						da.remove(da.get(i));
-						//da.remove(da.get(i));
-					}
-					
-					
-						
+					}	
 				}
 			}
 		}
@@ -289,11 +241,7 @@ public class Mundo {
 					}
 					else {
 						ma.remove(ma.get(i));
-						//ma.remove(ma.get(i));
-					}
-						
-					
-					
+					}	
 				}
 			}
 		}
@@ -306,12 +254,8 @@ public class Mundo {
 						
 					}
 					else {
-						//ca.remove(ca.get(i));
 						ca.remove(ca.get(j));
 					}
-						
-					
-					
 				}
 			}
 		}
@@ -324,12 +268,8 @@ public class Mundo {
 						
 					}
 					else {
-						//ma.remove(ma.get(i));
 						ma.remove(ma.get(j));
 					}
-						
-					
-					
 				}
 			}
 		}

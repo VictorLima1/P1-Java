@@ -2,13 +2,104 @@
 \label{classMoto}\index{Moto@{Moto}}
 
 
-Inheritance diagram for Moto\+:
-% FIG 0
+Inheritance diagram for Moto\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classMoto__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Moto\+:
-% FIG 1
-\subsection*{Additional Inherited Members}
+Collaboration diagram for Moto\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classMoto__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMoto_a676b8823dfda966d8a40d6624c5169b6}{Moto} (int x, int y, int velocidade, String cor, boolean fabrica)
+\item 
+void \hyperlink{classMoto_a161a14fdc1ead9e078b37537a61bc199}{move} (\hyperlink{classMoto}{Moto} m)
+\item 
+int \hyperlink{classMoto_a56bf604e45484d316f4a472254370289}{verificaX} (int x)
+\item 
+int \hyperlink{classMoto_a6933149c85bd01bad40a0e4e0052a430}{verificaY} (int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMoto_a676b8823dfda966d8a40d6624c5169b6}\label{classMoto_a676b8823dfda966d8a40d6624c5169b6}} 
+\index{Moto@{Moto}!Moto@{Moto}}
+\index{Moto@{Moto}!Moto@{Moto}}
+\subsubsection{\texorpdfstring{Moto()}{Moto()}}
+{\footnotesize\ttfamily Moto.\+Moto (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{velocidade,  }\item[{String}]{cor,  }\item[{boolean}]{fabrica }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construtor da classe \hyperlink{classMoto}{Moto}, que usa um super para chamar o construtor da classe Veículo
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classVeiculo}{Veiculo} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em velocidade} & \\
+\hline
+{\em cor} & \\
+\hline
+{\em fabrica} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMoto_a161a14fdc1ead9e078b37537a61bc199}\label{classMoto_a161a14fdc1ead9e078b37537a61bc199}} 
+\index{Moto@{Moto}!move@{move}}
+\index{move@{move}!Moto@{Moto}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Moto.\+move (\begin{DoxyParamCaption}\item[{\hyperlink{classMoto}{Moto}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que movimenta a moto, recebendo um objeto da própria classe como parâmetro 
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+Gerando um número aleatório para movimentação do veículo em 4 direções possíveis
+
+Ifs para verificação do resultado obtido no random\mbox{\Hypertarget{classMoto_a56bf604e45484d316f4a472254370289}\label{classMoto_a56bf604e45484d316f4a472254370289}} 
+\index{Moto@{Moto}!verificaX@{verificaX}}
+\index{verificaX@{verificaX}!Moto@{Moto}}
+\subsubsection{\texorpdfstring{verifica\+X()}{verificaX()}}
+{\footnotesize\ttfamily int Moto.\+verificaX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que verifica se a moto chegou ao limite do mapa em X e reseta a coordenada 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoto_a6933149c85bd01bad40a0e4e0052a430}\label{classMoto_a6933149c85bd01bad40a0e4e0052a430}} 
+\index{Moto@{Moto}!verificaY@{verificaY}}
+\index{verificaY@{verificaY}!Moto@{Moto}}
+\subsubsection{\texorpdfstring{verifica\+Y()}{verificaY()}}
+{\footnotesize\ttfamily int Moto.\+verificaY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que verifica se a moto chegou ao limite do mapa em Y e reseta a coordenada 
+\begin{DoxyParams}{Parameters}
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

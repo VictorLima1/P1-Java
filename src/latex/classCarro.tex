@@ -2,27 +2,112 @@
 \label{classCarro}\index{Carro@{Carro}}
 
 
-Inheritance diagram for Carro\+:
-% FIG 0
+Inheritance diagram for Carro\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classCarro__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Carro\+:
-% FIG 1
+Collaboration diagram for Carro\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classCarro__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCarro_a04825b53411fbe9dc67f52147d06cda0}\label{classCarro_a04825b53411fbe9dc67f52147d06cda0}} 
-{\bfseries Carro} (int x, int y, int velocidade, String cor)
+\hyperlink{classCarro_a66ef0b0e1dbbf15cf165bdd741e7b07d}{Carro} (int x, int y, int velocidade, String cor, boolean fabrica)
 \item 
-\mbox{\Hypertarget{classCarro_ac1474da2f7b971afe6c865f896287d5a}\label{classCarro_ac1474da2f7b971afe6c865f896287d5a}} 
-void {\bfseries move} ()
-\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
-\begin{DoxyCompactItemize}
+void \hyperlink{classCarro_a17c8959d24c88817f461f1c29e0f99ed}{move} (\hyperlink{classCarro}{Carro} c)
 \item 
-\mbox{\Hypertarget{classCarro_affc88d52cea6659e1d2cd57e43a12701}\label{classCarro_affc88d52cea6659e1d2cd57e43a12701}} 
-int {\bfseries mov} = r.\+next\+Int(4)
+int \hyperlink{classCarro_add3f779cbff4f49e42bd073eaca2451a}{verificaX} (int x)
+\item 
+int \hyperlink{classCarro_aefac90e7ced5a09323c9114fc2905dd6}{verificaY} (int y)
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCarro_a66ef0b0e1dbbf15cf165bdd741e7b07d}\label{classCarro_a66ef0b0e1dbbf15cf165bdd741e7b07d}} 
+\index{Carro@{Carro}!Carro@{Carro}}
+\index{Carro@{Carro}!Carro@{Carro}}
+\subsubsection{\texorpdfstring{Carro()}{Carro()}}
+{\footnotesize\ttfamily Carro.\+Carro (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{velocidade,  }\item[{String}]{cor,  }\item[{boolean}]{fabrica }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construtor da classe \hyperlink{classCarro}{Carro}, que usa um super para chamar o construtor da classe Veículo
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classVeiculo}{Veiculo} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em velocidade} & \\
+\hline
+{\em cor} & \\
+\hline
+{\em fabrica} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCarro_a17c8959d24c88817f461f1c29e0f99ed}\label{classCarro_a17c8959d24c88817f461f1c29e0f99ed}} 
+\index{Carro@{Carro}!move@{move}}
+\index{move@{move}!Carro@{Carro}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Carro.\+move (\begin{DoxyParamCaption}\item[{\hyperlink{classCarro}{Carro}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que movimenta o carro, recebendo um objeto da própria classe como parâmetro 
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+$<$ Gerando um número aleatório para movimentação do veículo em 4 direções possíveis
+
+Ifs para verificação do resultado obtido no random
+
+$<$ Obtendo o valor atual de X
+
+$<$ Somando 2 (por ser a velocidade do carro) no valor atual de X
+
+$<$ Chamando a função andaX da classe Veículo para realizar a movimentação
+
+Tudo se repete, da mesma forma que o if acima\mbox{\Hypertarget{classCarro_add3f779cbff4f49e42bd073eaca2451a}\label{classCarro_add3f779cbff4f49e42bd073eaca2451a}} 
+\index{Carro@{Carro}!verificaX@{verificaX}}
+\index{verificaX@{verificaX}!Carro@{Carro}}
+\subsubsection{\texorpdfstring{verifica\+X()}{verificaX()}}
+{\footnotesize\ttfamily int Carro.\+verificaX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que verifica se o carro chegou ao limite do mapa em X e reseta a coordenada 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCarro_aefac90e7ced5a09323c9114fc2905dd6}\label{classCarro_aefac90e7ced5a09323c9114fc2905dd6}} 
+\index{Carro@{Carro}!verificaY@{verificaY}}
+\index{verificaY@{verificaY}!Carro@{Carro}}
+\subsubsection{\texorpdfstring{verifica\+Y()}{verificaY()}}
+{\footnotesize\ttfamily int Carro.\+verificaY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que verifica se o carro chegou ao limite do mapa em Y e reseta a coordenada 
+\begin{DoxyParams}{Parameters}
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

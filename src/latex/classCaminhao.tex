@@ -2,4 +2,117 @@
 \label{classCaminhao}\index{Caminhao@{Caminhao}}
 
 
-Inheritance diagram for Caminhao\+:
+Inheritance diagram for Caminhao\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classCaminhao__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Caminhao\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classCaminhao__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCaminhao_a4f1abc58ca9a7e48ab56505a553733bb}{Caminhao} (int x, int y, int velocidade, String cor, boolean fabrica)
+\item 
+void \hyperlink{classCaminhao_ad5c349085ca9b79dd22f9d230205dd9d}{move} (\hyperlink{classCaminhao}{Caminhao} d)
+\item 
+int \hyperlink{classCaminhao_a42fe92db1834d785615a48b6a996ab51}{verificaX} (int x)
+\item 
+int \hyperlink{classCaminhao_a71435d7d443cf69b29ae66d35e346904}{verificaY} (int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Caminhão Classe que gera um veículo do tipo Caminhão
+
+\begin{DoxyAuthor}{Author}
+Victor
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classVeiculo}{Veiculo} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCaminhao_a4f1abc58ca9a7e48ab56505a553733bb}\label{classCaminhao_a4f1abc58ca9a7e48ab56505a553733bb}} 
+\index{Caminhao@{Caminhao}!Caminhao@{Caminhao}}
+\index{Caminhao@{Caminhao}!Caminhao@{Caminhao}}
+\subsubsection{\texorpdfstring{Caminhao()}{Caminhao()}}
+{\footnotesize\ttfamily Caminhao.\+Caminhao (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{velocidade,  }\item[{String}]{cor,  }\item[{boolean}]{fabrica }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construtor da classe Caminhão, que usa um super para chamar o construtor da classe Veículo
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classVeiculo}{Veiculo} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em velocidade} & \\
+\hline
+{\em cor} & \\
+\hline
+{\em fabrica} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCaminhao_ad5c349085ca9b79dd22f9d230205dd9d}\label{classCaminhao_ad5c349085ca9b79dd22f9d230205dd9d}} 
+\index{Caminhao@{Caminhao}!move@{move}}
+\index{move@{move}!Caminhao@{Caminhao}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Caminhao.\+move (\begin{DoxyParamCaption}\item[{\hyperlink{classCaminhao}{Caminhao}}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que movimenta o caminhão, recebendo um objeto da própria classe como parâmetro 
+\begin{DoxyParams}{Parameters}
+{\em d} & \\
+\hline
+\end{DoxyParams}
+Gerando um número aleatório para movimentação do veículo em 4 direções possíveis
+
+Ifs para verificação do resultado obtido no random\mbox{\Hypertarget{classCaminhao_a42fe92db1834d785615a48b6a996ab51}\label{classCaminhao_a42fe92db1834d785615a48b6a996ab51}} 
+\index{Caminhao@{Caminhao}!verificaX@{verificaX}}
+\index{verificaX@{verificaX}!Caminhao@{Caminhao}}
+\subsubsection{\texorpdfstring{verifica\+X()}{verificaX()}}
+{\footnotesize\ttfamily int Caminhao.\+verificaX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que verifica se ao caminhão chegou ao limite do mapa em X e reseta a coordenada 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCaminhao_a71435d7d443cf69b29ae66d35e346904}\label{classCaminhao_a71435d7d443cf69b29ae66d35e346904}} 
+\index{Caminhao@{Caminhao}!verificaY@{verificaY}}
+\index{verificaY@{verificaY}!Caminhao@{Caminhao}}
+\subsubsection{\texorpdfstring{verifica\+Y()}{verificaY()}}
+{\footnotesize\ttfamily int Caminhao.\+verificaY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Função que verifica se o caminhão chegou ao limite do mapa em Y e reseta a coordenada 
+\begin{DoxyParams}{Parameters}
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Caminhao.\+java\end{DoxyCompactItemize}

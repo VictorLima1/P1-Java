@@ -2,36 +2,192 @@
 \label{classVeiculo}\index{Veiculo@{Veiculo}}
 
 
-Inheritance diagram for Veiculo\+:
-% FIG 0
+Inheritance diagram for Veiculo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classVeiculo__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Veiculo\+:
-% FIG 1
+Collaboration diagram for Veiculo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classVeiculo__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classVeiculo_a56a53987094d52940568e14b9a6f4684}\label{classVeiculo_a56a53987094d52940568e14b9a6f4684}} 
-{\bfseries Veiculo} (int x, int y, int velocidade, String cor)
+\hyperlink{classVeiculo_a9e42cc073f5ec6269187d23fbf9f811d}{Veiculo} ()
+\begin{DoxyCompactList}\small\item\em Função random, utilizada para gerar posições aleatórias. \end{DoxyCompactList}\item 
+\hyperlink{classVeiculo_aac421cbaf36de9c7483f6d59ffbfa9b6}{Veiculo} (int x, int y, int velocidade, String cor, boolean fabrica)
 \item 
-\mbox{\Hypertarget{classVeiculo_a28cf763354cb7f3d14272c9e793db57e}\label{classVeiculo_a28cf763354cb7f3d14272c9e793db57e}} 
-int {\bfseries setX} ()
+int \hyperlink{classVeiculo_a28cf763354cb7f3d14272c9e793db57e}{setX} ()
 \item 
-\mbox{\Hypertarget{classVeiculo_ac0356427caf9839b90e558c99c09395f}\label{classVeiculo_ac0356427caf9839b90e558c99c09395f}} 
-int {\bfseries setY} ()
+void \hyperlink{classVeiculo_a96a258d5c102f8e0c11d655e1992bdb2}{andaX} (int x)
 \item 
-\mbox{\Hypertarget{classVeiculo_a235b29e1e25ec8c769b20fb2aeba8404}\label{classVeiculo_a235b29e1e25ec8c769b20fb2aeba8404}} 
-int {\bfseries getX} ()
+void \hyperlink{classVeiculo_a3e63d6cddc5c6dea8302dc1c8e9f12bc}{andaY} (int y)
 \item 
-\mbox{\Hypertarget{classVeiculo_a06b2a923e51186673a016f75d10363d3}\label{classVeiculo_a06b2a923e51186673a016f75d10363d3}} 
-int {\bfseries getY} ()
+int \hyperlink{classVeiculo_ac0356427caf9839b90e558c99c09395f}{setY} ()
 \item 
-\mbox{\Hypertarget{classVeiculo_a29ede179017c05f28aebf02922a5478b}\label{classVeiculo_a29ede179017c05f28aebf02922a5478b}} 
-int {\bfseries get\+Velocidade} ()
+int \hyperlink{classVeiculo_a235b29e1e25ec8c769b20fb2aeba8404}{getX} ()
 \item 
-\mbox{\Hypertarget{classVeiculo_ad1df848daf28895b13071d6dec374480}\label{classVeiculo_ad1df848daf28895b13071d6dec374480}} 
-String {\bfseries get\+Cor} ()
+int \hyperlink{classVeiculo_a06b2a923e51186673a016f75d10363d3}{getY} ()
+\item 
+int \hyperlink{classVeiculo_a29ede179017c05f28aebf02922a5478b}{get\+Velocidade} ()
+\item 
+String \hyperlink{classVeiculo_ad1df848daf28895b13071d6dec374480}{get\+Cor} ()
+\item 
+void \hyperlink{classVeiculo_a8201bb998eb49364bb5d5bb05ce531ab}{set\+Fabrica} (boolean status)
+\item 
+boolean \hyperlink{classVeiculo_a6447f0eeb99399f1f96e835c22a88479}{get\+Fabrica} ()
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVeiculo_a9e42cc073f5ec6269187d23fbf9f811d}\label{classVeiculo_a9e42cc073f5ec6269187d23fbf9f811d}} 
+\index{Veiculo@{Veiculo}!Veiculo@{Veiculo}}
+\index{Veiculo@{Veiculo}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{Veiculo()}{Veiculo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Veiculo.\+Veiculo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função random, utilizada para gerar posições aleatórias. 
+
+Construtor da classe Veículo Incializa as váriaveis de veículo \mbox{\Hypertarget{classVeiculo_aac421cbaf36de9c7483f6d59ffbfa9b6}\label{classVeiculo_aac421cbaf36de9c7483f6d59ffbfa9b6}} 
+\index{Veiculo@{Veiculo}!Veiculo@{Veiculo}}
+\index{Veiculo@{Veiculo}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{Veiculo()}{Veiculo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Veiculo.\+Veiculo (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{velocidade,  }\item[{String}]{cor,  }\item[{boolean}]{fabrica }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construtor da classe Veículo Cria veículos com variáveis que são recebidas na chamada das funções de cada veículo específico
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em velocidade} & \\
+\hline
+{\em cor} & \\
+\hline
+{\em fabrica} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classVeiculo_a96a258d5c102f8e0c11d655e1992bdb2}\label{classVeiculo_a96a258d5c102f8e0c11d655e1992bdb2}} 
+\index{Veiculo@{Veiculo}!andaX@{andaX}}
+\index{andaX@{andaX}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{anda\+X()}{andaX()}}
+{\footnotesize\ttfamily void Veiculo.\+andaX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Altera o valor de X de um veículo com base no que será passado dentro de cada veículo específico
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVeiculo_a3e63d6cddc5c6dea8302dc1c8e9f12bc}\label{classVeiculo_a3e63d6cddc5c6dea8302dc1c8e9f12bc}} 
+\index{Veiculo@{Veiculo}!andaY@{andaY}}
+\index{andaY@{andaY}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{anda\+Y()}{andaY()}}
+{\footnotesize\ttfamily void Veiculo.\+andaY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Altera o valor de Y de um veículo com base no que será passado dentro de cada veículo específico
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVeiculo_ad1df848daf28895b13071d6dec374480}\label{classVeiculo_ad1df848daf28895b13071d6dec374480}} 
+\index{Veiculo@{Veiculo}!get\+Cor@{get\+Cor}}
+\index{get\+Cor@{get\+Cor}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{get\+Cor()}{getCor()}}
+{\footnotesize\ttfamily String Veiculo.\+get\+Cor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+A cor do veículo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVeiculo_a6447f0eeb99399f1f96e835c22a88479}\label{classVeiculo_a6447f0eeb99399f1f96e835c22a88479}} 
+\index{Veiculo@{Veiculo}!get\+Fabrica@{get\+Fabrica}}
+\index{get\+Fabrica@{get\+Fabrica}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{get\+Fabrica()}{getFabrica()}}
+{\footnotesize\ttfamily boolean Veiculo.\+get\+Fabrica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Se um veículo está ou não em uma fábrica 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVeiculo_a29ede179017c05f28aebf02922a5478b}\label{classVeiculo_a29ede179017c05f28aebf02922a5478b}} 
+\index{Veiculo@{Veiculo}!get\+Velocidade@{get\+Velocidade}}
+\index{get\+Velocidade@{get\+Velocidade}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{get\+Velocidade()}{getVelocidade()}}
+{\footnotesize\ttfamily int Veiculo.\+get\+Velocidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+A velocidade do veículo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVeiculo_a235b29e1e25ec8c769b20fb2aeba8404}\label{classVeiculo_a235b29e1e25ec8c769b20fb2aeba8404}} 
+\index{Veiculo@{Veiculo}!getX@{getX}}
+\index{getX@{getX}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{get\+X()}{getX()}}
+{\footnotesize\ttfamily int Veiculo.\+getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+O valor de X do veículo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVeiculo_a06b2a923e51186673a016f75d10363d3}\label{classVeiculo_a06b2a923e51186673a016f75d10363d3}} 
+\index{Veiculo@{Veiculo}!getY@{getY}}
+\index{getY@{getY}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{get\+Y()}{getY()}}
+{\footnotesize\ttfamily int Veiculo.\+getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+O valor de Y do veículo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVeiculo_a8201bb998eb49364bb5d5bb05ce531ab}\label{classVeiculo_a8201bb998eb49364bb5d5bb05ce531ab}} 
+\index{Veiculo@{Veiculo}!set\+Fabrica@{set\+Fabrica}}
+\index{set\+Fabrica@{set\+Fabrica}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{set\+Fabrica()}{setFabrica()}}
+{\footnotesize\ttfamily void Veiculo.\+set\+Fabrica (\begin{DoxyParamCaption}\item[{boolean}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Define se um veículo está ou não dentro de uma fábrica, com base no que é recebido em status
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVeiculo_a28cf763354cb7f3d14272c9e793db57e}\label{classVeiculo_a28cf763354cb7f3d14272c9e793db57e}} 
+\index{Veiculo@{Veiculo}!setX@{setX}}
+\index{setX@{setX}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{set\+X()}{setX()}}
+{\footnotesize\ttfamily int Veiculo.\+setX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cria um valor aleatório para o X do veículo
+
+\begin{DoxyReturn}{Returns}
+O valor aleatório gerado para X 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVeiculo_ac0356427caf9839b90e558c99c09395f}\label{classVeiculo_ac0356427caf9839b90e558c99c09395f}} 
+\index{Veiculo@{Veiculo}!setY@{setY}}
+\index{setY@{setY}!Veiculo@{Veiculo}}
+\subsubsection{\texorpdfstring{set\+Y()}{setY()}}
+{\footnotesize\ttfamily int Veiculo.\+setY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cria um valor aleatório para o Y do veículo
+
+\begin{DoxyReturn}{Returns}
+O valor aleatório gerado para Y 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

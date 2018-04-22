@@ -238,7 +238,7 @@ public class Mundo {
 		// Colisão entre caminhões apenas
 		for (int i = 0; i < da.size(); i ++) {
 			for (int j = 0; j < da.size(); j++) {
-				if(da.get(j).getX() == da.get(i).getX() && da.get(j).getY() == da.get(i).getX()) {
+				if(da.get(j).getX() == da.get(i).getX() && da.get(j).getY() == da.get(i).getY()) {
 					if(da.get(i).getX() == da.get(i).getX() && da.get(i).getY() == da.get(i).getY()) {
 						
 					}
@@ -256,7 +256,7 @@ public class Mundo {
 		// Colisão entre motos apenas
 		for (int i = 0; i < ma.size(); i ++) {
 			for (int j = 0; j < ma.size(); j++) {
-				if(ma.get(j).getX() == ma.get(i).getX() && ma.get(j).getY() == ma.get(i).getX()) {
+				if(ma.get(j).getX() == ma.get(i).getX() && ma.get(j).getY() == ma.get(i).getY()) {
 					if(ma.get(i).getX() == ma.get(i).getX() && ma.get(i).getY() == ma.get(i).getY()) {
 						
 					}
@@ -274,7 +274,7 @@ public class Mundo {
 		// Colisão entre caminhão e carro
 		for(int i = 0; i < da.size(); i++) {
 			for (int j = 0; j < ca.size(); j++) {
-				if(ca.get(j).getX() == da.get(i).getX() && ca.get(j).getY() == da.get(i).getX()) {
+				if(ca.get(j).getX() == da.get(i).getX() && ca.get(j).getY() == da.get(i).getY()) {
 					if(da.size() > ca.size()) {
 						
 					}
@@ -291,7 +291,7 @@ public class Mundo {
 		// Colisão entre caminhão e moto
 		for(int i = 0; i < da.size(); i++) {
 			for (int j = 0; j < ma.size(); j++) {
-				if(ma.get(j).getX() == da.get(i).getX() && ma.get(j).getY() == da.get(i).getX()) {
+				if(ma.get(j).getX() == da.get(i).getX() && ma.get(j).getY() == da.get(i).getY()) {
 					if(da.size() > ma.size()) {
 						
 					}

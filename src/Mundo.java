@@ -133,6 +133,24 @@ public class Mundo {
 		int carros = 0;
 		int motos = 0;
 		int caminhoes = 0;
+		
+		for(int i = 0; i < ca.size(); i++) {
+			if(ca.get(i).getFabrica() == true) {
+				carros++;
+			}
+		}
+		
+		for(int i = 0; i < da.size(); i++) {
+			if(da.get(i).getFabrica() == true) {
+				caminhoes++;
+			}
+		}
+		
+		for(int i = 0; i < ma.size(); i++) {
+			if(ma.get(i).getFabrica() == true) {
+				motos++;
+			}
+		}
 			for(int i = 0; i<30; i++) {
 				for(int j = 0; j < 60; j++) {
 					
@@ -168,8 +186,12 @@ public class Mundo {
 				System.out.println("");
 			}	
 			
-			System.out.print("\u001b[44m \033[0m");
-			System.out.println(" Carro");
+			/*System.out.print("\u001b[44m \033[0m");
+			System.out.print(" Carros   ");
+			System.out.print("\u001b[41m \033[0m");
+			System.out.print(" Motos   ");
+			System.out.print("\u001b[43;1m \033[0m");
+			System.out.println(" Caminhões");*/
 			System.out.println("Número de carros: " + carros);
 			System.out.println("Número de caminhões: " + caminhoes);
 			System.out.println("Número de motos: " + motos);
@@ -199,7 +221,16 @@ public class Mundo {
 		for (int i = 0; i < ca.size(); i ++) {
 			for (int j = 0; j < ca.size(); j++) {
 				if(ca.get(j).getX() == ca.get(i).getX() && ca.get(j).getY() == ca.get(i).getX()) {
-						ca.remove(i);
+					if(ca.get(i).getX() == ca.get(i).getX() && ca.get(i).getY() == ca.get(i).getY()) {
+						
+					}
+					else {
+						ca.remove(ca.get(i));
+						ca.remove(ca.get(j));
+					}
+						
+					
+					
 				}
 			}
 		}
@@ -208,7 +239,16 @@ public class Mundo {
 		for (int i = 0; i < da.size(); i ++) {
 			for (int j = 0; j < da.size(); j++) {
 				if(da.get(j).getX() == da.get(i).getX() && da.get(j).getY() == da.get(i).getX()) {
-						da.remove(i);
+					if(da.get(i).getX() == da.get(i).getX() && da.get(i).getY() == da.get(i).getY()) {
+						
+					}
+					else {
+						da.remove(da.get(i));
+						da.remove(da.get(j));
+					}
+					
+					
+						
 				}
 			}
 		}
@@ -217,7 +257,16 @@ public class Mundo {
 		for (int i = 0; i < ma.size(); i ++) {
 			for (int j = 0; j < ma.size(); j++) {
 				if(ma.get(j).getX() == ma.get(i).getX() && ma.get(j).getY() == ma.get(i).getX()) {
-						ma.remove(i);
+					if(ma.get(i).getX() == ma.get(i).getX() && ma.get(i).getY() == ma.get(i).getY()) {
+						
+					}
+					else {
+						ma.remove(ma.get(i));
+						ma.remove(ma.get(j));
+					}
+						
+					
+					
 				}
 			}
 		}
@@ -225,13 +274,15 @@ public class Mundo {
 		// Colisão entre caminhão e carro
 		for(int i = 0; i < da.size(); i++) {
 			for (int j = 0; j < ca.size(); j++) {
-				if(ca.get(j).getX() == da.get(i).getX() && ca.get(j).getY() == da.get(i).getY()) {
-					if(da.size()>ca.size()) {
+				if(ca.get(j).getX() == da.get(i).getX() && ca.get(j).getY() == da.get(i).getX()) {
+					if(da.size() > ca.size()) {
 						
 					}
 					else {
-						ca.remove(i);
+						ca.remove(ca.get(j));
 					}
+						
+					
 					
 				}
 			}
@@ -240,13 +291,15 @@ public class Mundo {
 		// Colisão entre caminhão e moto
 		for(int i = 0; i < da.size(); i++) {
 			for (int j = 0; j < ma.size(); j++) {
-				if(ma.get(j).getX() == da.get(i).getX() && ma.get(j).getY() == da.get(i).getY()) {
-					if(da.size()>ma.size()) {
+				if(ma.get(j).getX() == da.get(i).getX() && ma.get(j).getY() == da.get(i).getX()) {
+					if(da.size() > ma.size()) {
 						
 					}
 					else {
-						ma.remove(i);
+						ma.remove(ma.get(j));
 					}
+						
+					
 					
 				}
 			}
@@ -260,7 +313,7 @@ public class Mundo {
 						
 					}
 					else {
-						ma.remove(i);
+						ma.remove(ma.get(j));
 					}
 					
 				}
@@ -273,9 +326,10 @@ public class Mundo {
 			int x = ca.get(a).getX();
 			int y = ca.get(a).getY();
 				for(int i = 0; i < 30; i ++) {
-					for(int j = 0; j < 10; j++) {
+					for(int j = 0; j < 60; j++) {
 						if(i == x && j == y) {
 							if(mapa[i][j] == 2 && ca.get(a).getFabrica() == false) {
+								ca.get(a).setFabrica(true);
 								ca.add(new Carro((v.setX()+1), (v.setY()+1), 2, "verde", false));
 								}
 							}
@@ -287,9 +341,10 @@ public class Mundo {
 			int x = da.get(a).getX();
 			int y = da.get(a).getY();
 				for(int i = 0; i < 30; i ++) {
-					for(int j = 0; j < 10; j++) {
+					for(int j = 0; j < 60; j++) {
 						if(i == x && j == y) {
 							if(mapa[i][j] == 2 && da.get(a).getFabrica() == false) {
+								da.get(a).setFabrica(true);
 								da.add(new Caminhao((v.setX()+1), (v.setY()+1), 1, "verde", false));
 								}
 							}
@@ -302,9 +357,10 @@ public class Mundo {
 			int x = ma.get(a).getX();
 			int y = ma.get(a).getY();
 				for(int i = 0; i < 30; i ++) {
-					for(int j = 0; j < 10; j++) {
+					for(int j = 0; j < 60; j++) {
 						if(i == x && j == y) {
 							if(mapa[i][j] == 2 && ma.get(a).getFabrica() == false) {
+								ma.get(a).setFabrica(true);
 								ma.add(new Moto((v.setX()+1), (v.setY()+1), 3, "vermelho", false));
 							}
 						}

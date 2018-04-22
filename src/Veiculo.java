@@ -21,8 +21,8 @@ public class Veiculo {
 	
 	public int setX() {
 		x = r.nextInt(28);
-		//System.out.print(x + ",");
 		return x;
+		
 	}
 	
 	public void setXNovamente(int x) {
@@ -39,7 +39,6 @@ public class Veiculo {
 	
 	public int setY() {
 		y = r.nextInt(58);
-		//System.out.println(y);
 		return y;
 	}
 	

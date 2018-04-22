@@ -136,21 +136,28 @@ public class Mundo {
 		
 		for(int i = 0; i < ca.size(); i++) {
 			if(ca.get(i).getFabrica() == true) {
-				carros++;
+				//carros++;
 			}
 		}
+		
+		
 		
 		for(int i = 0; i < da.size(); i++) {
 			if(da.get(i).getFabrica() == true) {
-				caminhoes++;
+				//caminhoes++;
 			}
 		}
 		
+		
+		
 		for(int i = 0; i < ma.size(); i++) {
 			if(ma.get(i).getFabrica() == true) {
-				motos++;
+				//motos++;
 			}
 		}
+		
+		
+		
 			for(int i = 0; i<30; i++) {
 				for(int j = 0; j < 60; j++) {
 					
@@ -168,17 +175,17 @@ public class Mundo {
 					else if(mapa[i][j] == 3){
 						//System.out.print("C");
 						System.out.print("\u001b[44m \033[0m");
-						carros++;
+						//carros++;
 					}
 					else if(mapa[i][j] == 4){
 						//System.out.print("D");
 						System.out.print("\u001b[43;1m \033[0m");
-						caminhoes++;
+						//caminhoes++;
 					}
 					else if(mapa[i][j] == 5){
 						//System.out.print("M");
 						System.out.print("\u001b[41m \033[0m");
-						motos++;
+						//motos++;
 					}
 					
 				}
@@ -186,12 +193,23 @@ public class Mundo {
 				System.out.println("");
 			}	
 			
-			/*System.out.print("\u001b[44m \033[0m");
+			System.out.print("\u001b[44m \033[0m");
 			System.out.print(" Carros   ");
 			System.out.print("\u001b[41m \033[0m");
 			System.out.print(" Motos   ");
 			System.out.print("\u001b[43;1m \033[0m");
-			System.out.println(" Caminhões");*/
+			System.out.println(" Caminhões");
+			for(int a = 0; a < ca.size(); a++) {
+				carros++;
+			}
+			for(int a = 0; a < da.size(); a++) {
+				caminhoes++;
+			}
+			for(int a = 0; a < ma.size(); a++) {
+				motos++;
+			}
+			
+		
 			System.out.println("Número de carros: " + carros);
 			System.out.println("Número de caminhões: " + caminhoes);
 			System.out.println("Número de motos: " + motos);
@@ -220,14 +238,23 @@ public class Mundo {
 		// Colisão entre carros apenas
 		for (int i = 0; i < ca.size(); i ++) {
 			for (int j = 0; j < ca.size(); j++) {
-				if(ca.get(j).getX() == ca.get(i).getX() && ca.get(j).getY() == ca.get(i).getX()) {
-					if(ca.get(i).getX() == ca.get(i).getX() && ca.get(i).getY() == ca.get(i).getY()) {
+				if(ca.get(j).getX() == ca.get(i).getX() && ca.get(j).getY() == ca.get(i).getY()) {
+					if (i == j) {
 						
 					}
 					else {
 						ca.remove(ca.get(i));
-						ca.remove(ca.get(j));
+						//ca.remove(ca.get(i));
 					}
+					
+					/*if(ca.get(i).getX() == ca.get(i).getX() && ca.get(i).getY() == ca.get(i).getY()) {
+						ca.remove(ca.get(i));
+						ca.remove(ca.get(i));
+					}
+					else {
+						ca.remove(ca.get(i));
+						ca.remove(ca.get(i));
+					}*/
 						
 					
 					
@@ -239,12 +266,12 @@ public class Mundo {
 		for (int i = 0; i < da.size(); i ++) {
 			for (int j = 0; j < da.size(); j++) {
 				if(da.get(j).getX() == da.get(i).getX() && da.get(j).getY() == da.get(i).getY()) {
-					if(da.get(i).getX() == da.get(i).getX() && da.get(i).getY() == da.get(i).getY()) {
+					if(i == j) {
 						
 					}
 					else {
 						da.remove(da.get(i));
-						da.remove(da.get(j));
+						//da.remove(da.get(i));
 					}
 					
 					
@@ -257,12 +284,12 @@ public class Mundo {
 		for (int i = 0; i < ma.size(); i ++) {
 			for (int j = 0; j < ma.size(); j++) {
 				if(ma.get(j).getX() == ma.get(i).getX() && ma.get(j).getY() == ma.get(i).getY()) {
-					if(ma.get(i).getX() == ma.get(i).getX() && ma.get(i).getY() == ma.get(i).getY()) {
+					if(i == j) {
 						
 					}
 					else {
 						ma.remove(ma.get(i));
-						ma.remove(ma.get(j));
+						//ma.remove(ma.get(i));
 					}
 						
 					
@@ -279,6 +306,7 @@ public class Mundo {
 						
 					}
 					else {
+						//ca.remove(ca.get(i));
 						ca.remove(ca.get(j));
 					}
 						
@@ -296,6 +324,7 @@ public class Mundo {
 						
 					}
 					else {
+						//ma.remove(ma.get(i));
 						ma.remove(ma.get(j));
 					}
 						
@@ -313,7 +342,7 @@ public class Mundo {
 						
 					}
 					else {
-						ma.remove(ma.get(j));
+						ma.remove(ma.get(i));
 					}
 					
 				}
